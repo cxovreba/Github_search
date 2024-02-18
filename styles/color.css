@@ -1,0 +1,13 @@
+:root {
+    /* light-mode-colors */
+    --blue: #0079FF;
+    --grey: #697C9A;
+    --ash: #4B6A9B;
+    --dark: #2B3442;
+    --smoke: #F6F8FF;
+    --shady-white: #FEFEFE;
+    /* dark-mode-colors */
+    --white: #FFFFFF;
+    --black: #141D2F;
+    --dark-blue: #1E2A47;
+}
