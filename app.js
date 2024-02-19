@@ -37,52 +37,56 @@ search__btn.addEventListener('click', () => {
                 search__btn.innerHTML = '<span id="loader" class="loader"></span>';
 
                 content_container.innerHTML = `
-                    <div class="profile_info">
-                        <div class="profile_img">
-                            <img class="img" src="${data.avatar_url}" alt="">
-                        </div>
-                        <div class="username_info">
-                            <div class="info">
-                                <div class="username">${data.login}</div>
-                                <div class="name">${data.name}</div>
+                    <div class="profile_img1">
+                        <img class="img1" src="${data.avatar_url}" alt="" style="width: 117px; height: 117px; border-radius: 117px">
+                    </div>
+                    <div class="result_container">
+                        <div class="profile_info">
+                            <div class="profile_img">
+                                <img class="img" src="${data.avatar_url}" alt="">
                             </div>
-                            <div class="join_date">'joined' + ${new Date(data.created_at).toDateString()}</div>
+                            <div class="username_info">
+                                <div class="info">
+                                    <div class="username">${data.login}</div>
+                                    <div class="name">${data.name}</div>
+                                </div>
+                                <div class="join_date">joined: ${new Date(data.created_at).toDateString()}</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="details">${data.bio || 'Not available'}</div>
-                    <div class="follow_info">
-                        <div class="repository_quantity">
-                            <div class="unit">Repos</div>
-                            <div class="quantity">${data.public_repos}</div>
+                        <div class="details">${data.bio || 'Not available'}</div>
+                        <div class="follow_info">
+                            <div class="repository_quantity">
+                                <div class="unit">Repos</div>
+                                <div class="quantity">${data.public_repos}</div>
+                            </div>
+                            <div class="follower_quantity">
+                                <div class="unit">Followers</div>
+                                <div class="quantity">${data.followers}</div>
+                            </div>
+                            <div class="following_quantity">
+                                <div class="unit">Following</div>
+                                <div class="quantity">${data.following}</div>
+                            </div>
                         </div>
-                        <div class="follower_quantity">
-                            <div class="unit">Followers</div>
-                            <div class="quantity">${data.followers}</div>
+                        <div class="links">
+                            <div class="location_tag">
+                                <img class="link_icon" src="./icons/003-pin.png" alt="">
+                                <a class="location" href="#">${data.location || 'Not available'}</a>
+                            </div>
+                            <div class="github_tag">
+                                <img class="link_icon" src="./icons/002-url.png" alt="">
+                                <a class="github_link" href="">${data.html_url || 'Not available'}</a>
+                            </div>
+                            <div class="twiter_tag">
+                                <img class="link_icon" src="./icons/004-twitter.png" alt="">
+                                <a class="twiter" href="">${data.twitter_username || 'Not available'}</a>
+                            </div>
+                            <div class="office_tag">
+                                <img class="link_icon" src="./icons/001-office-building.png" alt="">
+                                <a class="office" href="">${data.company || 'Not available'}</a>
+                            </div>
                         </div>
-                        <div class="following_quantity">
-                            <div class="unit">Following</div>
-                            <div class="quantity">${data.following}</div>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <div class="tags">
-                            <img class="link_icon" src="./icons/003-pin.png" alt="">
-                            <a class="location" href="#">${data.location || 'Not available'}</a>
-                        </div>
-                        <div class="tags">
-                            <img class="link_icon" src="./icons/002-url.png" alt="">
-                            <a class="github_link" href="">${data.html_url || 'Not available'}</a>
-                        </div>
-                        <div class="tags">
-                            <img class="link_icon" src="./icons/004-twitter.png" alt="">
-                            <a class="twiter" href="">${data.twitter_username || 'Not available'}</a>
-                        </div>
-                        <div class="tags">
-                            <img class="link_icon" src="./icons/001-office-building.png" alt="">
-                            <a class="github" href="">${data.company || 'Not available'}</a>
-                        </div>
-                    </div>
-                    `;
+                    </div>`;
             }).finally(() => {
                 search__btn.innerHTML = 'Search';
             });
@@ -90,4 +94,6 @@ search__btn.addEventListener('click', () => {
         // loader.classList.add()
         alert("No results");
     };
+
+    search_input.value = '';
 });

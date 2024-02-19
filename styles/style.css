@@ -6,7 +6,8 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    margin-block: 20px 40px;
+    align-items: center;
+    padding: 20px 24px 40px 24px;
     gap: 16px;
 }
 
@@ -69,7 +70,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 7px;
+}
+
+.info_search {
+    display: flex;
+    gap: 9px;
 }
 
 #search_input {
@@ -130,8 +136,8 @@ body {
     align-items: center;
 }
 
-.profile_img {
-    border-radius: 70px;
+.img {
+    width: 70px;
 }
 
 .username {
@@ -197,13 +203,50 @@ body {
     gap: 16px;
 }
 
-.tags {
+.location_tag {
     display: flex;
     gap: 13px; 
 }
 
-.tags a {
+.github_tag {
+    display: flex;
+    gap: 13px; 
+}
+
+.twiter_tag {
+    display: flex;
+    gap: 13px; 
+}
+
+.office_tag {
+    display: flex;
+    gap: 13px; 
+}
+
+.location_tag a {
     text-decoration: none;
     color: var(--ash);
     font-size: 13px;
+}
+
+.github_tag a {
+    text-decoration: none;
+    color: var(--ash);
+    font-size: 13px;
+}
+
+.twiter_tag a {
+    text-decoration: none;
+    color: var(--ash);
+    font-size: 13px;
+}
+
+.office_tag a {
+    text-decoration: none;
+    color: var(--ash);
+    font-size: 13px;
+}
+
+.profile_img1 {
+    display: none;
 }

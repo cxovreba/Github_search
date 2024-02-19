@@ -1,0 +1,167 @@
+/*Responsive*/
+@media screen and (min-width: 790px) {
+    .container {
+        width: 768px;
+        padding: 140px 98px 236px 97px;
+        gap: 24px;
+    }
+
+    .head {
+        width: 573px;
+        margin-bottom: 12px;
+        gap: 367px;
+    }
+
+    .search {
+        width: 573px;
+        height: 69px;
+        gap: 123px;
+    }
+
+    .info_search {
+        gap: 24px;
+    }
+
+    #search_input {
+        width: 254px;
+        font-size: 18px;
+    }
+
+    #search_btn {
+        width: 106px;
+        padding: 12.5px 23px 13.5px 24px;
+        font-size: 16px;
+    }
+
+    .result {
+        width: 573px;
+        padding: 40px;
+    }
+
+    .profile_info {
+        margin-bottom: 24px;
+        width: 493px;
+        gap: 40px;
+    }
+
+    .img {
+        width: 117px;
+    }
+
+    .username {
+        font-size: 26px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .details {
+        width: 493px;
+    }
+
+    .follow_info {
+        margin-block: 32px 30px;
+        width: 493px;
+        padding: 15px 96px 17px 32px;
+        gap: 91px;
+    }
+
+    .unit {
+        font-size: 13px;
+    }
+
+    .quantity {
+        font-size: 22px;
+    }
+
+    .links {
+        display: grid;
+    }
+
+    .location_tag {
+        grid-column: 1 / span 1;
+        grid-row: 1; 
+    }
+    
+    .github_tag {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+    }
+    
+    .twiter_tag {
+        grid-column: 2;
+        grid-row: 1 / span 1; 
+    }
+    
+    .office_tag {
+        grid-column: 2;
+        grid-row: 2 / span 1;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 1320px;
+        padding: 144px 355px 170px 355px;
+    }
+
+    .head {
+        width: 730px;
+        gap: 524px;
+    }
+
+    #mode:hover {
+        color: #222731;
+        cursor: pointer;
+    }
+
+    #icon:hover {
+        fill: #222731;
+        cursor: pointer;
+    }
+
+    .search {
+        width: 730px;
+        gap: 280px;
+    }
+
+    #search_btn:hover {
+        background: #60ABFF;
+        cursor: pointer;
+    }
+
+    .result {
+        width: 730px;
+        padding: 48px;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .profile_img1 {
+        display: inherit;
+    }
+
+    .profile_img {
+        display: none;
+    }
+
+    .profile_info {
+        width: 480px;
+    }
+
+    .username_info {
+        display: flex;
+        gap: 138px;
+    }
+
+    .details {
+        width: 480px;
+    }
+
+    .follow_info {
+        margin-block: 32px 37px;
+        width: 480px;
+        padding: 15px 83px 17px 32px;
+    }
+}
