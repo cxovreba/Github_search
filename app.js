@@ -3,22 +3,48 @@ const mode_change = document.getElementById("switch");
 mode_change.addEventListener('click', () => {
     const mode = document.getElementById('mode');
     const icon = document.getElementById('icon');
+    const title = document.querySelector(`.title`);
+    const search = document.querySelector('.search');
+    const result = document.querySelector(`.result`);
+    const search_input = document.getElementById('search_input');
+    const username = document.querySelector('.username');
+    const join_date = document.querySelector(`.join_date`);
+    const details = document.querySelector('.details');
+    const follow_info = document.querySelector('.follow_info');
+    const unit = document.querySelector(`.unit`);
+    const quantity = document.querySelector('.quantity');
 
-    // console.log("Current text content:", mode.textContent);
-    // console.log("Current icon inner HTML:", icon.innerHTML);
-
-    if (mode.textContent === 'DARK' && icon.innerHTML === `<img src="./icons/moon.png" alt="">`) {
+    if (mode.textContent === 'DARK' ) {
         mode.textContent = "LIGHT";
         icon.innerHTML = `<img src="./icons/002-sun.png" alt="">`;
-        // console.log("Switching to light mode");
+        mode.style.color = "#fff";
+        title.style.color = '#fff';
+        search.style.background = '#1E2A47';
+        search_input.style.background = '#1E2A47';
+        search_input.style.color = '#fff';
+        result.style.background = '#1E2A47';
+        username.style.color = '#fff';
+        join_date.style.color = '#fff';
+        details.style.color = '#fff';
+        follow_info.style.background = '#141D2F';
+        unit.style.color = '#fff';
+        quantity.style.color = '#fff';
     } else {
         mode.textContent = "DARK";
         icon.innerHTML = ` <img src="./icons/moon.png" alt="">`;
-        // console.log("Switching to dark mode")
+        mode.style.color = "#697C9A";
+        title.style.color = "#222731";
+        search.style.background = '#FEFEFE';
+        search_input.style.background = '#FEFEFE';
+        search_input.style.color = '#4B6A9B';
+        result.style.background = '#FEFEFE';
+        username.style.color = '#2B3442';
+        join_date.style.color = '#697C9A';
+        details.style.color = '#4B6A9B';
+        follow_info.style.background = '#F6F8FF';
+        unit.style.color = '#4B6A9B';
+        quantity.style.color = '#2B3442';
     };
-
-    // console.log("Updated text content:", mode.textContent);
-    // console.log("Updated icon inner HTML:", icon.innerHTML);
 
     document.body.classList.toggle('mode_change');
 });
@@ -27,6 +53,16 @@ const search_input = document.getElementById('search_input');
 const search__btn = document.getElementById('search_btn');
 
 search__btn.addEventListener('click', () => {
+    
+    let loader = `<span class="loader"></span>`;
+    document.querySelector('.result').innerHTML = loader;
+
+    searchResault();
+
+    search_input.value = '';
+});
+
+const searchResault = () => { 
     const search_value = search_input.value;
 
     try {
@@ -34,7 +70,6 @@ search__btn.addEventListener('click', () => {
             .then(response => response.json())
             .then(data => {
                 const content_container = document.querySelector('.result');
-                search__btn.innerHTML = '<span id="loader" class="loader"></span>';
 
                 content_container.innerHTML = `
                     <div class="profile_img1">
@@ -87,13 +122,9 @@ search__btn.addEventListener('click', () => {
                             </div>
                         </div>
                     </div>`;
-            }).finally(() => {
-                search__btn.innerHTML = 'Search';
+                    // document.querySelector('.result').innerHTML= content_container;
             });
     } catch (error) {
-        // loader.classList.add()
         alert("No results");
     };
-
-    search_input.value = '';
-});
+}
