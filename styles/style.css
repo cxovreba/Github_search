@@ -223,25 +223,7 @@ body {
     gap: 13px; 
 }
 
-.location_tag a {
-    text-decoration: none;
-    color: var(--ash);
-    font-size: 13px;
-}
-
-.github_tag a {
-    text-decoration: none;
-    color: var(--ash);
-    font-size: 13px;
-}
-
-.twiter_tag a {
-    text-decoration: none;
-    color: var(--ash);
-    font-size: 13px;
-}
-
-.office_tag a {
+.links a {
     text-decoration: none;
     color: var(--ash);
     font-size: 13px;

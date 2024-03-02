@@ -164,4 +164,8 @@
         width: 480px;
         padding: 15px 83px 17px 32px;
     }
+
+    .links a:hover {
+        text-decoration: underline 1px;
+    }
 }
